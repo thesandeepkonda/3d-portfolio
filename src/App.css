@@ -166,7 +166,6 @@ body, html {
   overflow: hidden;
 }
 
-/* If you add real images later, this will style them */
 .project-img-placeholder img {
   width: 100%;
   height: 100%;
@@ -206,60 +205,51 @@ body, html {
 
 .project-link:hover { border-color: #cda434; }
 
-
-
-/* =========================================================
-   ===== MOBILE RESPONSIVENESS (Phones & Small Tablets) =====
-   ========================================================= */
-
+/* ===== MOBILE RESPONSIVENESS ===== */
 @media (max-width: 768px) {
   
-  /* 1. Fix the Hero Section (Page 1) */
   .hero-content {
-    margin: auto 5vw; /* Reduces the huge left margin */
+    margin: auto 5vw; 
     padding-left: 20px;
   }
   .hero-title {
-    font-size: 3.5rem; /* Shrinks the massive text so it fits */
+    font-size: 3.5rem; 
   }
   .hero-subtitle {
     font-size: 1rem;
     margin-top: 15px;
   }
 
-  /* 2. Fix the Statement (Page 2) */
   .statement-text {
     font-size: 1.8rem;
     padding: 0 15px;
   }
 
-  /* 3. Fix the Professional Grid (Page 3) */
   .bottom-content {
-    margin: auto 5vw 5vh 5vw; /* Centers the grid on mobile */
+    margin: auto 5vw 5vh 5vw; 
   }
   .pro-grid {
-    grid-template-columns: 1fr; /* Forces the boxes into a single vertical column */
+    grid-template-columns: 1fr; 
   }
   .pro-panel {
-    padding: 30px 20px; /* Reduces the inner padding of the boxes */
+    padding: 30px 20px; 
   }
   .pro-title {
     font-size: 1.5rem;
   }
 
-  /* 4. Fix the Selected Works Grid (Page 4) */
   .projects-container {
-    width: 90vw; /* Takes up more of the small screen */
+    width: 90vw; 
   }
   .projects-header {
     font-size: 2rem;
     margin-bottom: 20px;
   }
   .projects-grid {
-    grid-template-columns: 1fr; /* Stacks the projects vertically */
+    grid-template-columns: 1fr; 
     gap: 30px;
   }
   .project-img-placeholder {
-    aspect-ratio: 4/3; /* Adjusts the image box shape for phones */
+    aspect-ratio: 4/3; 
   }
 }

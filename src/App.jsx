@@ -4,6 +4,30 @@ import { Environment, Cloud, ScrollControls, Scroll, useScroll } from '@react-th
 import * as THREE from 'three';
 import './App.css';
 
+// Add this import at the top of App.jsx
+import { EiffelTower } from './EiffelTower';
+
+// Replace the AbstractCenterpiece in EnvironmentObjects with:
+function EnvironmentObjects() {
+  return (
+    <>
+      <color attach="background" args={['#050505']} />
+      <ambientLight intensity={0.8} />
+      <directionalLight position={[50, 50, 30]} intensity={2} castShadow />
+      <directionalLight position={[-50, 20, -30]} intensity={1} color="#cda434" />
+      <pointLight position={[0, 100, 0]} intensity={2} color="#ffffff" />
+      
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]} receiveShadow>
+        <planeGeometry args={[1000, 1000]} />
+        <meshStandardMaterial color="#080808" roughness={0.1} metalness={0.9} />
+      </mesh>
+
+      {/* EIFFEL TOWER INSTEAD OF ABSTRACT CENTERPIECE */}
+      <EiffelTower position={[0, 0, 0]} scale={1} />
+    </>
+  );
+}
+
 // --- SCROLL DRIVEN CAMERA CONTROLLER ---
 function ScrollCamera() {
   const scroll = useScroll();
@@ -76,7 +100,6 @@ function AbstractCenterpiece() {
   );
 }
 
-// --- 3D SCENE ASSETS ---
 // --- 3D SCENE ASSETS (OFFLINE SAFE MODE) ---
 function EnvironmentObjects() {
   return (
@@ -156,6 +179,7 @@ export default function App() {
                     <p className="statement-text">"Excellence is not an act, but a habit of continuous refinement."</p>
                  </div>
               </div>
+              
 
               <div className="scroll-section" style={{ justifyContent: 'center' }}>
                 <div className="bottom-content">
